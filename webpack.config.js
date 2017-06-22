@@ -11,7 +11,7 @@ module.exports = {
   entry: path.resolve(APP, 'index.js'),
   output: {
     path: PUBLIC,
-    filename: '[name].js',
+    filename: '[name].[hash].js',
     publicPath: '/public'
   },
   resolve: {
@@ -46,8 +46,8 @@ module.exports = {
       filename: 'generatedIndex.html',
       template: 'src/client/index.ejs',
       files: {
-        css: ['public/bundle.css'],
-        js: ['public/main.js']
+        css: ['public/bundle.[hash].css'],
+        js: ['public/main.[hash].js']
       }
     })
     //  CAN'T GET THIS TO WORK RIGHT YET
