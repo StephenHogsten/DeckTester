@@ -13,6 +13,9 @@ class App extends Component {
           <Route exact path='/' render={() => (
             <p>You're on the home page!</p>
           )} />
+          <Route exact path='/test' render={() => (
+            <p>You're on a test page!</p>
+          )} />
           <Route render={() => (
             <p>Invalid path given</p>
           )} />
