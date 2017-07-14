@@ -1,4 +1,46 @@
-p {
-  font-size: 40pt;
-  color: brown;
+.purple {
+  background-color: purple;
+  color: white;
+}
+
+.green {
+  background-color: green;
+  color: white;
+}
+
+.blue {
+  background-color: blue;
+  color: white;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}
+
+.info-row {
+  display: flex;
+  flex-wrap: wrap;
+  p{
+    margin: 5px;
+  }
+  .card-holder {
+    border: 1px solid gray;
+    margin: 5px;
+    width: 40%;
+    p {
+      padding: 5px;
+    }
+  }
+}
+
+.missions {
+  margin: 5px;
+  padding: 10px;
+  width: 40%;
+  background-color: pink;
+  border: 1px solid gray;
+  .missions {
+    width: 100%;
+  }
 }

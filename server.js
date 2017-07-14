@@ -12,12 +12,12 @@ const webpack = require('webpack');
 const webpackMiddleware = require('webpack-dev-middleware');
 const webpackConfig = require('./webpack.config');
 
-mongoose.Promise = global.Promise;
-if (process.env) {
-  mongoose.connect(process.env.MONGO_URI, (err) => {
-    if (err) console.log('mongoose connection error', err);   // eslint-disable-line
-  });
-}
+// mongoose.Promise = global.Promise;
+// if (process.env) {
+//   mongoose.connect(process.env.MONGO_URI, (err) => {
+//     if (err) console.log('mongoose connection error', err);   // eslint-disable-line
+//   });
+// }
 
 const app = express();
 
@@ -31,11 +31,11 @@ var sessionOptions = {
   resave: false,
   saveUninitialized: true,
 };
-if (process.env) {
-  sessionOptions.store = new MongoStore({
-    mongooseConnection: mongoose.connection
-  });
-}
+// if (process.env) {
+//   sessionOptions.store = new MongoStore({
+//     mongooseConnection: mongoose.connection
+//   });
+// }
 if (process.env.ENV_TYPE === 'PRODUCTION') {
   sessionOptions.cookie = {secure: true};
   app.set('trust proxy', 1);
