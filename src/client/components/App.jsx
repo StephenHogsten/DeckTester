@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import _ClickMe from '../containers/_ClickMe';
 import '../scss/App.scss';
 
 class App extends Component {
@@ -25,7 +24,10 @@ class App extends Component {
         ['wacko world - everyone (including you) shuffles all their move cards to choose the next move', '2 purple + 1 anything'], 
         ['freaky Friday - swap two players\' positions on the board', '3 purple'], 
         ['turn a dust you drew into anything', '3 purple + 1 anything'], 
-        ['discard a dust you drew', '2 purple']
+        ['discard a dust you drew', '2 purple'],
+        ['enhanced magic: each of your moves this turn may move double distance', '1 purple + 1'],
+        ['enhanced magic: each of your moves this turn may move double distance', '1 purple + 1'],
+        ['enhanced magic: each of your moves this turn may move double distance', '1 purple + 1']
       ],
       red: [
         ['embers - any more red spells this turn cost 1 red less', '1 red'], 
@@ -45,7 +47,10 @@ class App extends Component {
         ['fireball - choose one player within 5 squares - cancel their next move', '2 red'], 
         ['red hot - (playable in reaction) if something lands on you it has to jump off (too hot)', '2 red'], 
         ['burn out coal - each player picks a dust from their bag and exchanges it for dirt', '4 red'], 
-        ['hot spot - place a marker on the board, if anyone lands there this turn their turn ends', '2 red + 1 anything']
+        ['hot spot - place a marker on the board, if anyone lands there this turn their turn ends', '2 red + 1 anything'],
+        ['blast off - shoot 3 in one direction, mugging everything in your path', '2 red'],
+        ['blast off - shoot 3 in one direction, mugging everything in your path', '2 red'],
+        ['blast off - shoot 3 in one direction, mugging everything in your path', '2 red']
       ],
       blue: [ 
         ['wave - push one player 2 spaces away', '1 blue'], 
@@ -65,7 +70,10 @@ class App extends Component {
         ['whirlpool - anyone within 5 spaces rotates the rest of their moves clockwise', '2 blue'], 
         ['flood - any further moves that move more than one space are reduced by one', '2 blue'], 
         ['rain - any other blue spells this turn cost 2 blue less (minimum 1)', '1 blue'], 
-        ['ice - continue in current direction until you hit something', '2 blue + 1 anything']
+        ['ice - continue in current direction until you hit something', '2 blue + 1 anything'],
+        ['lily pad - hop two extra in any direction', '2 blue + 1'],
+        ['lily pad - hop two extra in any direction', '2 blue + 1'],
+        ['lily pad - hop two extra in any direction', '2 blue + 1']
       ],
       green: [
         ['peek at someone else\'s mission', '1 green'], 
@@ -85,7 +93,10 @@ class App extends Component {
         ['sneak - (play when flipping moves) keep your moves hidden and play them all at once', '2 green'], 
         ['snatch - steal a dust from an opponent to use (return at end of turn)', '1 green + 1 anything'], 
         ['forced exchange - trade one of your dusts for one of the opponents\' of your choice (and keep it)', '3 green + 1 anything'], 
-        ['master thief - steal from any opponent (and keep it)', '4 green']
+        ['master thief - steal from any opponent (and keep it)', '4 green'],
+        ['shadowy slide - if against a wall may move as far in the direction of a card as you wish', '1 green + 1'],
+        ['shadowy slide - if against a wall may move as far in the direction of a card as you wish', '1 green + 1'],
+        ['shadowy slide - if against a wall may move as far in the direction of a card as you wish', '1 green + 1']
       ],
       altar: [  // each of these is 25 VP, does not accept wildcards
         'deposit 2 of each dust',
@@ -115,45 +126,53 @@ class App extends Component {
         'acquire 3 blue dusts - 12vp',
         'acquire 3 purple dusts - 12vp',
         'acquire 3 green dusts - 12vp',
+        'rob red wizard - 5 vp',
+        'rob blue wizard - 5 vp',
+        'rob purple wizard - 5 vp',
+        'rob green wizard - 5 vp',
+        'rob player to your left - 8vp',
+        'rob player to your right - 8vp',
+        'acquire a "wild card" dust - 5vp',
+        'acquire one of each dust - 5vp',
+        'acquire 3 red dusts - 12vp',
+        'acquire 3 blue dusts - 12vp',
+        'acquire 3 purple dusts - 12vp',
+        'acquire 3 green dusts - 12vp',
+        'deposit one green dust in green land - 10vp',
+        'deposit one blue dust in blue land - 10vp',
+        'deposit one red dust in red land - 10vp',
+        'deposit one purple dust in purple land - 10vp',
+        'deposit one green dust in green land - 10vp',
+        'deposit one blue dust in blue land - 10vp',
+        'deposit one red dust in red land - 10vp',
+        'deposit one purple dust in purple land - 10vp',
         'go to building A - 2vp',
-        'go to building B - 2vp',
-        'go to building C - 2vp',
-        'go to building D - 2vp',
-        'go to building E - 2vp',
+        'go to building B - 3vp',
+        'go to building C - 3vp',
+        'go to building D - 3vp',
+        'go to building E - 3vp',
         'go to building F - 2vp',
-        'go to building G - 2vp',
-        'go to building H - 2vp',
-        'go to building I - 2vp',
-        'go to building J - 2vp',
+        'go to building G - 3vp',
+        'go to building H - 3vp',
+        'go to building I - 3vp',
+        'go to building J - 3vp',
         'go to building K - 2vp',
-        'go to building L - 2vp',
-        'go to building M - 2vp',
-        'go to building N - 2vp',
-        'go to building O - 2vp',
+        'go to building L - 3vp',
+        'go to building M - 3vp',
+        'go to building N - 3vp',
+        'go to building O - 3vp',
         'go to building P - 2vp',
-        'go to building Q - 2vp',
-        'go to building R - 2vp',
-        'go to building S - 2vp',
-        'go to building T - 2vp',
-        'deliver hamster to building A - 10vp',
+        'go to building Q - 3vp',
+        'go to building R - 3vp',
+        'go to building S - 3vp',
+        'go to building T - 3vp',
         'deliver hamster to building B - 10vp',
-        'deliver hamster to building C - 10vp',
-        'deliver hamster to building D - 10vp',
         'deliver hamster to building E - 10vp',
-        'deliver hamster to building F - 10vp',
         'deliver hamster to building G - 10vp',
-        'deliver hamster to building H - 10vp',
-        'deliver hamster to building I - 10vp',
         'deliver hamster to building J - 10vp',
-        'deliver hamster to building K - 10vp',
         'deliver hamster to building L - 10vp',
-        'deliver hamster to building M - 10vp',
-        'deliver hamster to building N - 10vp',
         'deliver hamster to building O - 10vp',
-        'deliver hamster to building P - 10vp',
         'deliver hamster to building Q - 10vp',
-        'deliver hamster to building R - 10vp',
-        'deliver hamster to building S - 10vp',
         'deliver hamster to building T - 10vp'
       ],
       altars: [],
@@ -286,7 +305,7 @@ class App extends Component {
             <td>J: +1 VP</td>
             <td>I: altar (+25)</td>
             <td>H: more missions</td>
-            <td>G: pick-up cube</td>
+            <td>G: -1 VP -1 cube (and hamster)</td>
             <td className='blue'>F: draw blue spell</td>
           </tr>
         </tbody>

@@ -1,0 +1,56 @@
+import card from './card';
+
+export default (function() {
+  let deck = [];
+
+  deck.push(card('mug \'em', 'rob red wizard', '5 vp', 'missions'));
+  deck.push(card('mug \'em', 'rob blue wizard', '5 vp', 'missions'));
+  deck.push(card('mug \'em', 'rob purple wizard', '5 vp', 'missions'));
+  deck.push(card('mug \'em', 'rob green wizard', '5 vp', 'missions'));
+  deck.push(card('pickpocket', 'rob player to your left', '8vp', 'missions'));
+  deck.push(card('pickpocket', 'rob player to your right', '8vp', 'missions'));
+  deck.push(card('priceless gem', 'acquire a "wild card" dust', '5vp', 'missions'));
+  deck.push(card('gem collector', 'acquire one of each dust', '5vp', 'missions'));
+  deck.push(card('gem collector', 'acquire 3 red dusts', '12vp', 'missions'));
+  deck.push(card('gem collector', 'acquire 3 blue dusts', '12vp', 'missions'));
+  deck.push(card('gem collector', 'acquire 3 purple dusts', '12vp', 'missions'));
+  deck.push(card('gem collector', 'acquire 3 green dusts', '12vp', 'missions'));
+  deck.push(card('from wence it came', 'deposit one green dust in green land', '10vp', 'missions'));
+  deck.push(card('from wence it came', 'deposit one blue dust in blue land', '10vp', 'missions'));
+  deck.push(card('from wence it came', 'deposit one red dust in red land', '10vp', 'missions'));
+  deck.push(card('from wence it came', 'deposit one purple dust in purple land', '10vp', 'missions'));
+  deck.push(card('from wence it came', 'deposit one green dust in green land', '10vp', 'missions'));
+  deck.push(card('from wence it came', 'deposit one blue dust in blue land', '10vp', 'missions'));
+  deck.push(card('from wence it came', 'deposit one red dust in red land', '10vp', 'missions'));
+  deck.push(card('from wence it came', 'deposit one purple dust in purple land', '10vp', 'missions'));
+  deck.push(card('traveler', 'go to building A', '2vp', 'missions'));
+  deck.push(card('traveler', 'go to building B', '3vp', 'missions'));
+  deck.push(card('traveler', 'go to building C', '3vp', 'missions'));
+  deck.push(card('traveler', 'go to building D', '3vp', 'missions'));
+  deck.push(card('traveler', 'go to building E', '3vp', 'missions'));
+  deck.push(card('traveler', 'go to building F', '2vp', 'missions'));
+  deck.push(card('traveler', 'go to building G', '3vp', 'missions'));
+  deck.push(card('traveler', 'go to building H', '3vp', 'missions'));
+  deck.push(card('traveler', 'go to building I', '3vp', 'missions'));
+  deck.push(card('traveler', 'go to building J', '3vp', 'missions'));
+  deck.push(card('traveler', 'go to building K', '2vp', 'missions'));
+  deck.push(card('traveler', 'go to building L', '3vp', 'missions'));
+  deck.push(card('traveler', 'go to building M', '3vp', 'missions'));
+  deck.push(card('traveler', 'go to building N', '3vp', 'missions'));
+  deck.push(card('traveler', 'go to building O', '3vp', 'missions'));
+  deck.push(card('traveler', 'go to building P', '2vp', 'missions'));
+  deck.push(card('traveler', 'go to building Q', '3vp', 'missions'));
+  deck.push(card('traveler', 'go to building R', '3vp', 'missions'));
+  deck.push(card('traveler', 'go to building S', '3vp', 'missions'));
+  deck.push(card('traveler', 'go to building T', '3vp', 'missions'));
+  deck.push(card('nice visit', 'deliver old man to building B', '10vp', 'missions'));
+  deck.push(card('nice visit', 'deliver old man to building E', '10vp', 'missions'));
+  deck.push(card('nice visit', 'deliver old man to building G', '10vp', 'missions'));
+  deck.push(card('nice visit', 'deliver old man to building J', '10vp', 'missions'));
+  deck.push(card('nice visit', 'deliver old man to building L', '10vp', 'missions'));
+  deck.push(card('nice visit', 'deliver old man to building O', '10vp', 'missions'));
+  deck.push(card('nice visit', 'deliver old man to building Q', '10vp', 'missions'));
+  deck.push(card('nice visit', 'deliver old man to building T', '10vp', 'missions'));
+
+  return deck;
+})();

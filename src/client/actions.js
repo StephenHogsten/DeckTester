@@ -1,8 +1,12 @@
-export const EXAMPLE_ACTION = 'EXAMPLE_ACTION'
+// export const REMOVE_CARD_FROM_DECK = 'REMOVE_CARD_FROM_DECK';
+// export const REMOVE_CARD_FROM_HAND = 'REMOVE_CARD_FROM_HAND';
+// export const REMOVE_CARD_FROM_DISPLAYED = 'REMOVE_CARD_FROM_DISPLAYED';
+// export const COPY_CARD_TO_LOCATION = 'COPY_CARD_TO_LOCATION';
+// export const REMOVE_CARD_FROM_LOCATION = 'REMOVE_CARD_FROM_LOCATION';
+export const DRAW_CARD_TO_DISPLAYED = 'DRAW_CARD_TO_DISPLAYED';
+export const ADD_DISPLAYED_TO_HAND = 'ADD_DISPLAYED_TO_HAND';
+export const ADD_DISPLAYED_TO_DISCARD = 'ADD_DISPLAYED_TO_DISCARD';
+export const PLAY_CARD = 'PLAY_CARD';
 
-export function exampleAction(value) {
-  return {
-    type: EXAMPLE_ACTION,
-    value: value
-  };
-}
+export const COLLAPSE_ALL_HANDS = 'COLLAPSE_ALL_HANDS';
+export const EXPAND_HAND = 'EXPAND_HAND';
